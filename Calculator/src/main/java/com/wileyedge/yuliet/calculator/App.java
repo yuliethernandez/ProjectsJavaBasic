@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class App {
+    
     private final Scanner sc;
     private final Random rd;  
     SimpleCalculator calculator;
@@ -49,7 +50,10 @@ public class App {
             
         }catch(InputMismatchException ex){
             System.out.println("Invalid entry.");
-        }finally{
+        }catch(Exception ex){
+            System.out.println("Can not divide by zero.");
+        }
+        finally{
             System.out.println("Program finished!");
         }        
     }
